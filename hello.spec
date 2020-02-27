@@ -17,7 +17,7 @@
 
 
 Name:           hello
-Version: 1.1582806342
+Version:        2.10
 Release:        0
 Summary:        hello world
 License:        WTFPL
