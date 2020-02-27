@@ -11,7 +11,11 @@ pipeline {
     stages {
         stage('CopyArtifact') {
             steps {
-                copyArtifacts projectName: "tk_runbuild"
+                script {
+                    def built = build('tk_runbuild');
+                    copyArtifacts(projectName: 'tk_runbuild', selector: specific("${built.number}"));
+                }
+                // copyArtifacts projectName: "tk_runbuild"
             }
         }
         stage('ShowVersion') {
