@@ -18,12 +18,12 @@ pipeline {
         }
         stage('GetSpec') {
             steps {
-                sh "cp hello.spec ~/rpmbuild/SPEC"
+                sh "cp hello.spec ~/rpmbuild/SPECS"
             }
         }
         stage('Build') {
             steps {
-                sh "cd ~/rpmbuild/SPEC && rpmbuild -ba hello.spec"
+                sh "cd ~/rpmbuild/SPECS && rpmbuild -ba hello.spec"
             }
         }
     }
