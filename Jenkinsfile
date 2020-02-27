@@ -16,11 +16,6 @@ pipeline {
                 sh "cd ~/rpmbuild/SOURCES && wget http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz"
             }
         }
-        stage('GetSource') {
-            steps {
-                sh "cd ~/rpmbuild/SOURCES && wget http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz"
-            }
-        }
         stage('GetSpec') {
             steps {
                 sh "cp ~/hello.spec ~/rpmbuild/SPEC"
