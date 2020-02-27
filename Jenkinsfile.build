@@ -40,6 +40,7 @@ pipeline {
             steps {
                 build job: 'tk_runtest', parameters: [
                     string( name: 'VERSION', value: "${VERSION}" ),
+                    string( name: 'BUILDNUMBER', value: "${env.BUILD_NUMBER}" ),
                 ]
             }
         }

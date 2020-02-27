@@ -1,5 +1,8 @@
 pipeline {
-    parameters { string(name: 'VERSION', defaultValue: 'fedora:latest', description: '') }
+    parameters {
+        string(name: 'VERSION', defaultValue: 'fedora:latest', description: ''),
+        string(name: 'BUILDNUMBER', defaultValue: '1', description: '')
+    }
 
     agent {
         docker {
