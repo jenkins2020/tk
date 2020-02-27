@@ -24,13 +24,13 @@ pipeline {
         stage('Build') {
             steps {
                 sh "cd ~/rpmbuild/SPECS && rpmbuild -ba hello.spec"
-                sh "pwd"
+                sh "cp $(find ~/rpmbuild -name '*.rpm') ."
             }
         }
     }
     post {
         always {
-            archiveArtifacts artifacts: '../../rpmbuild/**/*.rpm', fingerprint: true
+            archiveArtifacts artifacts: '**/*.rpm', fingerprint: true
         }
     }
 }
