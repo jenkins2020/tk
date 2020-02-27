@@ -11,7 +11,7 @@ pipeline {
             }
             stages {
                 stage('RunBuild') {
-                    build job: 'tk_runbuild', parameters: [[$class: 'StringParameterValue', name: 'VERSION', value: ${CONTAINER}]]
+                    build job: 'tk_runbuild', parameters: [string(name: 'VERSION', value: "${CONTAINER}")]
                 }
             }
         }
