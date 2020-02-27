@@ -24,6 +24,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh "cd ~/rpmbuild/SPECS && rpmbuild -ba hello.spec"
+                sh 'find ~/rpmbuild -name "*.rpm" -exec rpmlint {} \\;'
                 sh 'find ~/rpmbuild -name "*.rpm" -exec cp -v {} . \\;'
             }
         }
