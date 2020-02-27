@@ -1,0 +1,34 @@
+pipeline {
+    parameters { string(name: 'VERSION', defaultValue: 'fedora:latest', description: '') }
+
+    agent {
+        docker {
+            image "${CONTAINER}"
+                args '-u 0:0'
+        }
+    }
+
+    stages {
+        stage('CopyArtifact') {
+            steps {
+                copyArtifacts projectName: "tk_runbuild"
+            }
+        }
+        stage('ShowVersion') {
+            steps {
+                echo "${CONTAINER}"
+            }
+        }
+        stage('Install') {
+            steps {
+                sh "rpm -hiv hello-2.10-0.x86_64.rpm"
+            }
+        }
+        stage('Test') {
+            steps {
+                sh "/usr/bin/hello"
+            }
+        }
+    }
+}
+
