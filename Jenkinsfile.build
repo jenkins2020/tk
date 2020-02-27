@@ -39,7 +39,7 @@ pipeline {
         stage('RunTest') {
             steps {
                 build job: 'tk_runtest', parameters: [
-                    string( name: 'VERSION', value: ${VERSION})
+                    string( name: 'VERSION', value: "${VERSION}" )
                 ]
             }
         }
