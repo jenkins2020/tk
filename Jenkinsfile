@@ -18,7 +18,7 @@ pipeline {
         }
         stage('GetSpec') {
             steps {
-                sh "cp ~/hello.spec ~/rpmbuild/SPEC"
+                sh "cp ~/work*/*/hello.spec ~/rpmbuild/SPEC"
             }
         }
         stage('Build') {
