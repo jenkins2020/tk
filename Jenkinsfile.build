@@ -37,10 +37,8 @@ pipeline {
                 archiveArtifacts artifacts: '**/*.rpm', fingerprint: true
             }
         }
-        stages {
-            stage('RunTest') {
-                build job: 'tk_runtest', parameters: [[$class: 'StringParameterValue', name: 'VERSION', value: ${VERSION}]]
-            }
+        stage('RunTest') {
+            build job: 'tk_runtest', parameters: [[$class: 'StringParameterValue', name: 'VERSION', value: ${VERSION}]]
         }
     }
 }
