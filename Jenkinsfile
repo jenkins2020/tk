@@ -28,10 +28,10 @@ pipeline {
                 sh 'find ~/rpmbuild -name "*.rpm" -exec cp -v {} . \\;'
             }
         }
-    }
-    post {
-        always {
-            archiveArtifacts artifacts: '**/*.rpm', fingerprint: true
+        stage('Archive') {
+            steps {
+                archiveArtifacts artifacts: '**/*.rpm', fingerprint: true
+            }
         }
     }
 }

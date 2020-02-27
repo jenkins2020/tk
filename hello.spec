@@ -90,6 +90,6 @@ make %{?_smp_mflags}
 
 
 %changelog
-* Thu Feb 27 2020 me <me@me.com> 2.10
+* Thu Feb 27 2020 me <me@me.com> 2.10-0
 - initial version
 
