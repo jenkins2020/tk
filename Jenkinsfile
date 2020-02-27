@@ -18,8 +18,9 @@ pipeline {
         }
         stage('GetSpec') {
             steps {
-                sh "pwd"
-                sh "cp hello.spec ~/rpmbuild/SPEC"
+                sh "ls -al"
+                sh "git clone https://github.com/jenkins2020/tk"
+                sh "cp tk/hello.spec ~/rpmbuild/SPEC"
             }
         }
         stage('Build') {
