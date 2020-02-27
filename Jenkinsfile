@@ -6,7 +6,9 @@ pipeline {
     }
     stages {
         stage('Init') {
-            echo "Hello world!"
+            steps {
+                echo "Hello world!"
+            }
         }
     }
 }
