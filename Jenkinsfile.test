@@ -3,8 +3,8 @@ pipeline {
 
     agent {
         docker {
-            image "${CONTAINER}"
-                args '-u 0:0'
+            image "${VERSION}"
+            args '-u 0:0'
         }
     }
 
