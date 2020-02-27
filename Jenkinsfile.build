@@ -2,9 +2,8 @@ pipeline {
     parameters { string(name: 'VERSION', defaultValue: 'fedora:latest', description: '') }
 
     agent {
-        docker {
-            dockerfile "Dockerfile.${VERSION}"
-            args '-u 0:0'
+        dockerfile {
+            filename "Dockerfile.${VERSION}"
         }
     }
 
