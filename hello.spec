@@ -90,4 +90,6 @@ make %{?_smp_mflags}
 
 
 %changelog
-2.10: initial version
+* Do 27. Feb 14:09:55 CET 2020 me
+- initial version
+
