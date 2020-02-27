@@ -7,8 +7,8 @@ pipeline {
     stages {
         stage('Init') {
             steps {
-                echo "Hello world!"
-                sh "id; uptime"
+                sh "rpmdev-setuptree"
+                sh "ls ~/rpmbuild/*"
             }
         }
     }
