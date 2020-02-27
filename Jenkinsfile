@@ -24,6 +24,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh "cd ~/rpmbuild/SPECS && rpmbuild -ba hello.spec"
+                sh "pwd"
             }
         }
     }
