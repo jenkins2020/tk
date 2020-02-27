@@ -8,6 +8,7 @@ pipeline {
         stage('Init') {
             steps {
                 echo "Hello world!"
+                sh "id; uptime"
             }
         }
     }
