@@ -38,7 +38,9 @@ pipeline {
             }
         }
         stage('RunTest') {
-            build job: 'tk_runtest', parameters: [[$class: 'StringParameterValue', name: 'VERSION', value: ${VERSION}]]
+            steps {
+                build job: 'tk_runtest', parameters: [[$class: 'StringParameterValue', name: 'VERSION', value: ${VERSION}]]
+            }
         }
     }
 }
