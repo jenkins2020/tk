@@ -30,7 +30,7 @@ pipeline {
     }
     post {
         always {
-            archiveArtifacts artifacts: '/home/user/rpmbuild/**/*.rpm', fingerprint: true
+            archiveArtifacts artifacts: '../../rpmbuild/**/*.rpm', fingerprint: true
         }
     }
 }
