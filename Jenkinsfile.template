@@ -9,11 +9,11 @@ pipeline {
                         values 'fedora:28', 'fedora:29', 'fedora:30', 'fedora:31'. 'fedora:32'
                     }
                 }
-            }
-            stages {
-                stage('RunBuild') {
-                    steps {
-                        build job: 'tk_runbuild', parameters: [string(name: 'VERSION', value: "${CONTAINER}")]
+                stages {
+                    stage('RunBuild') {
+                        steps {
+                            build job: 'tk_runbuild', parameters: [string(name: 'VERSION', value: "${CONTAINER}")]
+                        }
                     }
                 }
             }
