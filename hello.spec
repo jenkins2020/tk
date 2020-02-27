@@ -19,7 +19,7 @@
 Name:           hello
 Version:        2.10
 Release:        0
-Summary:        Hello world
+Summary:        The classic
 License:        WTFPL
 Group:          toys
 Url:            https://github.com/jenkins2020/tk
@@ -40,14 +40,9 @@ make %{?_smp_mflags}
 %install
 %make_install
 
-# %post
-# %postun
-
 %files
 %defattr(-,root,root)
-# %doc ChangeLog README COPYING
 /usr/bin/hello
-/usr/lib/debug/usr/bin/hello-2.10-0.x86_64.debug
 /usr/share/info/hello.info.gz
 /usr/share/man/man1/hello.1.gz
 %lang(bg) /usr/share/locale/bg/LC_MESSAGES/hello.mo
