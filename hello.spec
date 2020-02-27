@@ -17,14 +17,14 @@
 
 
 Name:           hello
-Version: 1.1582806197
+Version: 1.1582806272
 Release:        0
 Summary:        hello world
 License:        WTFPL
 Group:          toys
 Url:            https://github.com/jenkins2020/tk
 Source:         hello.tar.gz
-BuildRequires:  
+# BuildRequires:  
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 %description
