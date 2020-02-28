@@ -7,7 +7,7 @@ pipeline {
                     axis {
                         name 'VERSION'
                         // values 'fedora:28', 'fedora:29', 'fedora:30', 'fedora:31', 'fedora:32'
-                        values 'fedora:30', 'fedora:31', 'fedora:32', 'centos:7', 'centos:8'
+                        values 'fedora:28', 'fedora:29', 'fedora:30', 'fedora:31', 'fedora:32', 'centos:7', 'centos:8'
                     }
                 }
                 stages {
