@@ -36,6 +36,7 @@ Hello World RPM package
 %build
 %configure
 make %{?_smp_mflags}
+%__mkdir_p %{buildroot}/usr/share/info/dir
 
 %install
 %make_install
