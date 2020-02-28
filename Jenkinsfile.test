@@ -21,7 +21,7 @@ pipeline {
         }
         stage('ShowVersion') {
             steps {
-                echo "${VERSION}"
+                echo "${VERSION} from build ${params.BUILDNUMBER}"
             }
         }
         stage('Install') {
