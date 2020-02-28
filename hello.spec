@@ -39,12 +39,11 @@ make %{?_smp_mflags}
 
 %install
 %make_install
-rmdir %{buildroot}/usr/share/info/dir || :
 
 %files
 %defattr(-,root,root)
 /usr/bin/hello
-/usr/share/info/hello.info.gz
+/usr/share/info/*
 /usr/share/man/man1/hello.1.gz
 %lang(bg) /usr/share/locale/bg/LC_MESSAGES/hello.mo
 %lang(ca) /usr/share/locale/ca/LC_MESSAGES/hello.mo
