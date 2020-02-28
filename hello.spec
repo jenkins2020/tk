@@ -42,6 +42,7 @@ make %{?_smp_mflags}
 
 %files
 %defattr(-,root,root)
+%dir /usr/share/info/dir
 /usr/bin/hello
 /usr/share/info/hello.info.gz
 /usr/share/man/man1/hello.1.gz
