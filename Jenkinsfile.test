@@ -1,6 +1,7 @@
 pipeline {
     parameters {
-        string(name: 'VERSION', defaultValue: 'fedora:latest', description: ''),
+        string(name: 'VERSION', defaultValue: 'fedora:latest', description: '')
+
         string(name: 'BUILDNUMBER', defaultValue: '1', description: '')
     }
 
