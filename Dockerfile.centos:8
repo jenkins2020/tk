@@ -2,6 +2,7 @@ FROM centos:8
 MAINTAINER unknown
 
 RUN yum -y update && yum clean all && yum -y install wget && yum -y groupinstall "Development Tools"
+RUN groupadd mock
 RUN useradd -m -d /home/user -s /bin/bash user && usermod -a -G mock user
 USER user
 WORKDIR /home/user
