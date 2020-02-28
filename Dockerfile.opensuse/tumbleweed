@@ -1,7 +1,7 @@
 FROM opensuse/tumbleweed
 MAINTAINER opensuse
 
-RUN zypper -n up && zypper -n -i wget devel_C_C++ devel_basis devel_rpm_build
+RUN zypper -n up && zypper -n in wget devel_C_C++ devel_basis devel_rpm_build
 RUN groupadd mock
 RUN useradd -m -d /home/user -s /bin/bash user && usermod -a -G mock user
 USER user
