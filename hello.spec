@@ -43,7 +43,8 @@ make %{?_smp_mflags}
 %files
 %defattr(-,root,root)
 /usr/bin/hello
-/usr/share/info/*
+/usr/share/info/hello.info.gz
+%ghost /usr/share/info/dir
 /usr/share/man/man1/hello.1.gz
 %lang(bg) /usr/share/locale/bg/LC_MESSAGES/hello.mo
 %lang(ca) /usr/share/locale/ca/LC_MESSAGES/hello.mo

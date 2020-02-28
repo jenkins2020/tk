@@ -8,6 +8,11 @@ pipeline {
     }
 
     stages {
+        stage('ShowVersion') {
+            steps {
+                echo "${VERSION}"
+            }
+        }
         stage('Init') {
             steps {
                 sh "rpmdev-setuptree || mkdir -vp ~/rpmbuild/SRPMS ~/rpmbuild/BUILD ~/rpmbuild/RPMS ~/rpmbuild/SOURCES ~/rpmbuild/SPECS"
