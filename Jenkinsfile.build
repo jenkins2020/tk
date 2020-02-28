@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Init') {
             steps {
-                sh "rpmdev-setuptree"
+                sh "rpmdev-setuptree || mkdir -vp ~/rpmbuild/SRPMS ~/rpmbuild/BUILD ~/rpmbuild/RPMS ~/rpmbuild/SOURCES ~/rpmbuild/SPECS"
                 sh "ls ~/rpmbuild/*"
             }
         }
